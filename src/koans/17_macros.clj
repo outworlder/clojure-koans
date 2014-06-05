@@ -20,7 +20,7 @@
         :else
         (let [operator (second form)
               first-arg (first form)
-              others (nth form 2)]
+              others (drop 2 form)]
           `(~operator
             (r-infix ~first-arg)
             (r-infix ~others)))))
